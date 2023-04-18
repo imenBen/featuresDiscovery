@@ -145,7 +145,7 @@ public class Node implements IAdaptable, IPropertySource, Serializable  {
 	@Override
 	public String toString() {
 		return "Node [name=" + name + ", types=" + types + ", extent=" + extent + ", intent=" + intent + ", ID=" + ID
-				+ ", children=" + children + "]";
+				+ ", children=" + children + "], hashcode "+ Objects.hash(extent,intent);
 	}
 	public int getID() {
 		return ID;

@@ -1011,6 +1011,7 @@ public class ReverseInheritanceRelationBuilder implements RelationBuilder {
 			allMethods.addAll(Arrays.asList(localMethods));
 
 			// now, get the type hierarchy to climb along it
+			
 			typeHierarchy = type.newTypeHierarchy(pMonitor);
 
 			// get all the supertypes, both within the project, and outside

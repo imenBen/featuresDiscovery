@@ -1,23 +1,35 @@
 package ca.uqam.latece.aspects.extractor.lattice.model.impl;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
+import ca.uqam.latece.aspects.extractor.lattice.graph.model.NodeFeatureType;
 import ca.uqam.latece.aspects.extractor.lattice.model.LatticeNode;
 import ca.uqam.latece.aspects.extractor.lattice.visitors.Visitor;
 
 public class LatticeNodeImpl implements LatticeNode {
 
+	private String name;
+	
+
 	private Set<Object> intent;
 
 	private Set<Object> extent;
 
-	private Set<LatticeNode> parents;
+	private transient Set<LatticeNode> parents;
 
 	private Set<LatticeNode> children;
 
+	private List<NodeFeatureType> types = new ArrayList<NodeFeatureType>();
+	
+
+	
+
+	
 	public LatticeNodeImpl() {
 		intent = new HashSet<Object>();
 		extent = new HashSet<Object>();
@@ -72,6 +84,13 @@ public class LatticeNodeImpl implements LatticeNode {
 	public void addChild(LatticeNode childNode) {
 		children.add(childNode);
 
+	}
+	
+	public List<NodeFeatureType> getTypes() {
+		return types;
+	}
+	public void setTypes(List<NodeFeatureType> types) {
+		this.types = types;
 	}
 
 	@Override
@@ -155,7 +174,22 @@ public class LatticeNodeImpl implements LatticeNode {
 		return Objects.hash(extent, intent);
 	}
 
+
+	public void setIntent(Set<Object> intent) {
+		this.intent = intent;
+	}
+	
+	public void setExtent(Set<Object> extent) {
+		this.extent = extent;
+	}
 	
 	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 	
 }

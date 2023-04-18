@@ -1,8 +1,10 @@
 package ca.uqam.latece.aspects.extractor.lattice.model;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Set;
 
+import ca.uqam.latece.aspects.extractor.lattice.graph.model.NodeFeatureType;
 import ca.uqam.latece.aspects.extractor.lattice.visitors.Visitor;
 import ca.uqam.latece.aspects.extractor.lattice.visitors.Visitor.Direction;
 
@@ -60,4 +62,14 @@ public interface LatticeNode {
 	 * @param another
 	 */
 	public void takePlaceOf(LatticeNode another);
+	
+	
+	public void setIntent(Set<Object> intent);
+	
+	public void setExtent(Set<Object> extent);
+	
+	public String getName();
+	public void setName(String name);
+	public List<NodeFeatureType> getTypes();
+	public void setTypes(List<NodeFeatureType> types);
 }
