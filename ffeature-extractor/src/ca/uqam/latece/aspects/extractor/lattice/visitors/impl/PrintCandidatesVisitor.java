@@ -9,7 +9,6 @@ import java.util.Set;
 
 import com.sun.tools.javac.code.Types;
 
-import ca.uqam.latece.aspects.extractor.lattice.graph.model.Connection;
 import ca.uqam.latece.aspects.extractor.lattice.graph.model.Node;
 import ca.uqam.latece.aspects.extractor.lattice.graph.model.NodeFeatureType;
 import ca.uqam.latece.aspects.extractor.lattice.model.LatticeNode;
@@ -41,7 +40,6 @@ public class PrintCandidatesVisitor extends LatticePrettyPrinter {
 	 * (imen) 
 	 */
 	private List<Node> nodes = new ArrayList<Node>();
-	private List<Connection> graphConnections = new ArrayList<Connection>();
 		
 	public List<Node> getNodes() {
 		return nodes;
@@ -51,13 +49,7 @@ public class PrintCandidatesVisitor extends LatticePrettyPrinter {
 		this.nodes = nodes;
 	}
 
-	public List<Connection> getGraphConnections() {
-		return graphConnections;
-	}
 
-	public void setGraphConnections(List<Connection> graphConnections) {
-		this.graphConnections = graphConnections;
-	}
 	/** end (imen) **/
 	/**
 	 * instance variable containing list of candidate nodes

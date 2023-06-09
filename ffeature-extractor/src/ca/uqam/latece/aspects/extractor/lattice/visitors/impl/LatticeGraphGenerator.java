@@ -14,7 +14,7 @@ import org.eclipse.jdt.core.IType;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.jdt.core.Signature;
 
-import ca.uqam.latece.aspects.extractor.lattice.graph.model.Connection;
+
 import ca.uqam.latece.aspects.extractor.lattice.graph.model.Node;
 import ca.uqam.latece.aspects.extractor.lattice.graph.model.NodeFeatureType;
 import ca.uqam.latece.aspects.extractor.lattice.model.LatticeNode;
